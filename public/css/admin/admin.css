@@ -1,0 +1,471 @@
+/* =========================================================
+   DASHBOARD ADMIN
+========================================================= */
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+    width: 100%;
+    margin-bottom: 30px;
+
+    animation:
+        dashboardHeaderIn
+        0.5s ease both;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 6px;
+
+    color: #123a6d;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.dashboard-header p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   STAT GRID
+   Cocok untuk Bootstrap row maupun CSS grid
+========================================================= */
+
+.admin-stat-card {
+    position: relative;
+
+    width: 100%;
+    min-height: 125px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    overflow: hidden;
+
+    border: 1px solid #dbe5f0;
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    animation:
+        statCardIn
+        0.5s ease both;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.admin-stat-card:hover {
+    border-color: #c5d8ec;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.10);
+
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   GARIS AKSEN
+========================================================= */
+
+.admin-stat-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 100%;
+
+    border-radius: 0 4px 4px 0;
+
+    background: #1e5aa8;
+
+    transform:
+        scaleY(0);
+
+    transform-origin: bottom;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.admin-stat-card:hover::before {
+    transform:
+        scaleY(1);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    font-size: 24px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.admin-stat-card:hover .stat-icon {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   WARNA ICON
+========================================================= */
+
+.stat-icon.blue {
+    color: #1e5aa8;
+    background: #e8f1fb;
+}
+
+.stat-icon.green {
+    color: #16a34a;
+    background: #e9f8ef;
+}
+
+.stat-icon.orange {
+    color: #ea580c;
+    background: #fff4e6;
+}
+
+.stat-icon.purple {
+    color: #9333ea;
+    background: #f3e8ff;
+}
+
+.stat-icon.red {
+    color: #dc2626;
+    background: #fff1f2;
+}
+
+.stat-icon.cyan {
+    color: #0891b2;
+    background: #ecfeff;
+}
+
+.stat-icon.yellow {
+    color: #ca8a04;
+    background: #fef9c3;
+}
+
+
+/* =========================================================
+   STAT CONTENT
+========================================================= */
+
+.admin-stat-card > div:last-child {
+    min-width: 0;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.stat-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748b;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   ANGKA
+========================================================= */
+
+.admin-stat-card h2 {
+    margin: 0;
+
+    color: #123a6d;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================================
+   ANIMASI CARD BERURUTAN
+========================================================= */
+
+.admin-stat-card:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.admin-stat-card:nth-child(2) {
+    animation-delay: 0.10s;
+}
+
+.admin-stat-card:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.admin-stat-card:nth-child(4) {
+    animation-delay: 0.20s;
+}
+
+.admin-stat-card:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.admin-stat-card:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.admin-stat-card:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER ANIMATION
+========================================================= */
+
+@keyframes dashboardHeaderIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   CARD ANIMATION
+========================================================= */
+
+@keyframes statCardIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .dashboard-header {
+        margin-bottom: 25px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .admin-stat-card {
+        min-height: 115px;
+
+        padding: 20px;
+    }
+
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 22px;
+    }
+
+    .admin-stat-card h2 {
+        font-size: 27px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .dashboard-header {
+        margin-bottom: 22px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-header p {
+        font-size: 13px;
+    }
+
+    .admin-stat-card {
+        min-height: 110px;
+
+        padding: 18px;
+
+        gap: 15px;
+
+        border-radius: 14px;
+    }
+
+    .stat-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 12px;
+
+        font-size: 21px;
+    }
+
+    .admin-stat-card h2 {
+        font-size: 25px;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .dashboard-header {
+        margin-bottom: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 23px;
+    }
+
+    .dashboard-header p {
+        font-size: 12px;
+    }
+
+    .admin-stat-card {
+        min-height: 100px;
+
+        padding: 16px;
+
+        gap: 13px;
+
+        border-radius: 13px;
+    }
+
+    .stat-icon {
+        width: 44px;
+        height: 44px;
+
+        border-radius: 11px;
+
+        font-size: 19px;
+    }
+
+    .admin-stat-card h2 {
+        font-size: 23px;
+    }
+
+    .stat-label {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dashboard-header,
+    .admin-stat-card {
+        animation: none;
+    }
+
+    .admin-stat-card,
+    .stat-icon {
+        transition: none;
+    }
+
+    .admin-stat-card:hover {
+        transform: none;
+    }
+
+    .admin-stat-card:hover .stat-icon {
+        transform: none;
+    }
+
+    .admin-stat-card::before {
+        transition: none;
+    }
+}

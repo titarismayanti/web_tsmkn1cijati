@@ -1,0 +1,1289 @@
+/* =========================================================
+   PROFIL SEKOLAH
+========================================================= */
+
+/* =========================================================
+   FONT PROFIL SEKOLAH
+========================================================= */
+
+.page-header,
+.section,
+.submenu-tabs,
+.profile-layout,
+.profile-table-wrap,
+.profile-side,
+.school-info,
+.school-data,
+.school-logo,
+.visi-misi-card,
+.empty-state {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* Pastikan elemen teks juga mengikuti font */
+
+.page-header h1,
+.page-header p,
+.submenu-tabs .tab,
+.profile-table-wrap h2,
+.info-label,
+.info-value,
+.school-logo h3,
+.school-logo span,
+.visi-misi-card h3,
+.visi-misi-card p,
+.empty-state p {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+/* =========================================================
+   RESET KHUSUS HALAMAN PROFIL
+========================================================= */
+
+.page-header,
+.section,
+.profile-layout,
+.profile-table-wrap,
+.profile-side,
+.school-info,
+.school-data,
+.school-logo,
+.visi-misi-card,
+.empty-state {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    position: relative;
+
+    padding: 80px 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123a6d 0%,
+            #1e5aa8 55%,
+            #2b78c5 100%
+        );
+}
+
+
+/* Dekorasi kiri */
+
+.page-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -160px;
+    left: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    animation:
+        headerCircle 8s ease-in-out infinite;
+}
+
+
+/* Dekorasi kanan */
+
+.page-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    animation:
+        headerCircle 10s ease-in-out infinite reverse;
+}
+
+
+.page-header .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.page-header h1 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size: clamp(32px, 5vw, 50px);
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    animation:
+        fadeDown 0.8s ease both;
+}
+
+
+.page-header p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.90);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    animation:
+        fadeUp 0.8s ease 0.2s both;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.section.container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 55px 20px 80px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TAB PROFIL
+========================================================= */
+
+.submenu-tabs {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+
+    animation:
+        fadeUp 0.8s ease both;
+}
+
+
+.submenu-tabs .tab {
+    position: relative;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 24px;
+
+    border-radius: 12px;
+
+    border: 1px solid #dbe5f0;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.submenu-tabs .tab:hover {
+    color: #ffffff;
+
+    border-color: #1e5aa8;
+
+    background: #1e5aa8;
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(30,90,168,0.20);
+}
+
+
+.submenu-tabs .tab.active {
+    color: #ffffff;
+
+    border-color: #1e5aa8;
+
+    background: #1e5aa8;
+
+    box-shadow:
+        0 8px 20px
+        rgba(30,90,168,0.20);
+}
+
+
+/* =========================================================
+   PROFILE LAYOUT
+========================================================= */
+
+.profile-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(300px, 0.8fr);
+
+    gap: 30px;
+
+    align-items: stretch;
+
+    animation:
+        fadeUp 0.9s ease 0.15s both;
+}
+
+
+/* =========================================================
+   INFORMASI SEKOLAH
+========================================================= */
+
+.profile-table-wrap {
+    width: 100%;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe5f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.profile-table-wrap:hover {
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.10);
+}
+
+
+/* Judul */
+
+.profile-table-wrap h2 {
+    position: relative;
+
+    margin: 0 0 25px;
+
+    padding-bottom: 15px;
+
+    color: #123a6d;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.profile-table-wrap h2::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 55px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #1e5aa8;
+}
+
+
+/* =========================================================
+   INFORMASI + LOGO
+========================================================= */
+
+.school-info {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        230px;
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   DATA SEKOLAH
+========================================================= */
+
+.school-data {
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid #dbe5f0;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+/* Item informasi */
+
+.info-item {
+    display: grid;
+
+    grid-template-columns:
+        150px
+        minmax(0, 1fr);
+
+    gap: 15px;
+
+    padding: 17px 20px;
+
+    border-bottom:
+        1px solid #dbe5f0;
+
+    transition:
+        background 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+
+.info-item:hover {
+    padding-left: 25px;
+
+    background: #f8fafc;
+}
+
+
+/* Label */
+
+.info-label {
+    color: #123a6d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* Value */
+
+.info-value {
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   LOGO SEKOLAH
+========================================================= */
+
+.school-logo {
+    position: relative;
+
+    width: 100%;
+
+    padding: 25px 15px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    border:
+        1px solid #dbe5f0;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8f1fb,
+            #f1f5f9
+        );
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.school-logo:hover {
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.10);
+}
+
+
+/* Dekorasi logo */
+
+.school-logo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -80px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,90,168,0.08);
+
+    animation:
+        logoDecoration
+        6s ease-in-out infinite;
+}
+
+
+.school-logo::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    left: -40px;
+    bottom: -50px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,90,168,0.06);
+
+    animation:
+        logoDecoration
+        8s ease-in-out infinite reverse;
+}
+
+
+/* =========================================================
+   LINGKARAN LOGO
+========================================================= */
+
+.logo-circle {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 145px;
+    height: 145px;
+
+    margin: 0 auto 18px;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border:
+        5px solid
+        rgba(30,90,168,0.15);
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.10),
+
+        0 0 0 8px
+        rgba(30,90,168,0.05);
+
+    animation:
+        logoFloat
+        4s ease-in-out infinite;
+}
+
+
+/* Gambar logo */
+
+.logo-circle img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+}
+
+
+/* Nama sekolah */
+
+.school-logo h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 5px;
+
+    color: #123a6d;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* Label */
+
+.school-logo span {
+    position: relative;
+
+    z-index: 2;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   VISI & MISI
+========================================================= */
+
+.profile-side {
+    display: flex;
+
+    width: 100%;
+}
+
+
+.visi-misi-card {
+    position: relative;
+
+    width: 100%;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    border:
+        1px solid #dbe5f0;
+
+    border-radius: 16px;
+
+    color: #123a6d;
+
+    background:
+        linear-gradient(
+            145deg,
+            #e8f1fb,
+            #f1f5f9
+        );
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,0.06);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.visi-misi-card:hover {
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.10);
+}
+
+
+/* Dekorasi */
+
+.visi-misi-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    top: -110px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,90,168,0.07);
+
+    animation:
+        cardFloat
+        7s ease-in-out infinite;
+}
+
+
+.visi-misi-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    left: -70px;
+    bottom: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,90,168,0.05);
+
+    animation:
+        cardFloat
+        9s ease-in-out infinite reverse;
+}
+
+
+/* Judul visi misi */
+
+.visi-misi-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 12px;
+
+    color: #123a6d;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+.visi-misi-card h3::before {
+    content: "";
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    margin-right: 10px;
+
+    vertical-align: middle;
+
+    border-radius: 50%;
+
+    background: #1e5aa8;
+
+    box-shadow:
+        0 0 0 5px
+        rgba(30,90,168,0.10);
+}
+
+
+/* Isi */
+
+.visi-misi-card p {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 30px;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+.visi-misi-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    width: 100%;
+
+    padding: 50px 30px;
+
+    text-align: center;
+
+    border:
+        1px dashed #dbe5f0;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    color: #64748b;
+
+    animation:
+        fadeUp
+        0.8s ease both;
+}
+
+
+.empty-state p {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   ANIMASI FADE UP
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ANIMASI FADE DOWN
+========================================================= */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   ANIMASI HEADER
+========================================================= */
+
+@keyframes headerCircle {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(30px,20px)
+            scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   ANIMASI LOGO
+========================================================= */
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+/* =========================================================
+   ANIMASI DEKORASI LOGO
+========================================================= */
+
+@keyframes logoDecoration {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0);
+    }
+
+    50% {
+        transform:
+            translate(-12px,12px);
+    }
+}
+
+
+/* =========================================================
+   ANIMASI VISI MISI
+========================================================= */
+
+@keyframes cardFloat {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0);
+    }
+
+    50% {
+        transform:
+            translate(-15px,15px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .school-info {
+        grid-template-columns: 1fr;
+    }
+
+
+    .school-logo {
+        width: 100%;
+
+        max-width: 320px;
+
+        margin: 0 auto;
+    }
+
+
+    .profile-side {
+        min-height: auto;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET KECIL
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        padding: 70px 20px;
+    }
+
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+
+    .section.container {
+        padding:
+            50px 16px
+            60px;
+    }
+
+
+    .submenu-tabs {
+        margin-bottom: 30px;
+    }
+
+
+    .submenu-tabs .tab {
+        padding: 11px 18px;
+
+        font-size: 14px;
+    }
+
+
+    .profile-table-wrap {
+        padding: 25px;
+    }
+
+
+    .profile-table-wrap h2 {
+        font-size: 22px;
+    }
+
+
+    .visi-misi-card {
+        padding: 25px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-header {
+        padding: 60px 20px;
+    }
+
+
+    .page-header h1 {
+        font-size: 30px;
+
+        letter-spacing: 0;
+    }
+
+
+    .page-header p {
+        font-size: 14px;
+    }
+
+
+    .section.container {
+        padding:
+            40px 15px
+            50px;
+    }
+
+
+    /* TAB */
+
+    .submenu-tabs {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .submenu-tabs .tab {
+        width: 100%;
+
+        padding: 11px 15px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* CARD INFORMASI */
+
+    .profile-table-wrap {
+        padding: 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .profile-table-wrap h2 {
+        margin-bottom: 20px;
+
+        font-size: 21px;
+    }
+
+
+    /* DATA */
+
+    .info-item {
+        display: block;
+
+        padding: 15px;
+    }
+
+
+    .info-label {
+        display: block;
+
+        margin-bottom: 6px;
+    }
+
+
+    .info-value {
+        font-size: 14px;
+    }
+
+
+    .info-item:hover {
+        padding-left: 18px;
+    }
+
+
+    /* LOGO */
+
+    .school-logo {
+        padding: 25px 15px;
+
+        border-radius: 15px;
+    }
+
+
+    .logo-circle {
+        width: 125px;
+        height: 125px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .school-logo h3 {
+        font-size: 15px;
+    }
+
+
+    .school-logo span {
+        font-size: 12px;
+    }
+
+
+    /* VISI MISI */
+
+    .visi-misi-card {
+        padding: 23px 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .visi-misi-card h3 {
+        font-size: 19px;
+    }
+
+
+    .visi-misi-card p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page-header {
+        padding: 55px 15px;
+    }
+
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+
+    .page-header p {
+        font-size: 13px;
+    }
+
+
+    .section.container {
+        padding:
+            35px 12px
+            45px;
+    }
+
+
+    .profile-table-wrap {
+        padding: 17px;
+    }
+
+
+    .profile-table-wrap h2 {
+        font-size: 20px;
+    }
+
+
+    .logo-circle {
+        width: 115px;
+        height: 115px;
+    }
+
+
+    .school-logo {
+        padding: 22px 12px;
+    }
+
+
+    .visi-misi-card {
+        padding: 20px 17px;
+    }
+
+
+    .visi-misi-card h3 {
+        font-size: 18px;
+    }
+
+
+    .visi-misi-card p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-header::before,
+    .page-header::after,
+    .school-logo::before,
+    .school-logo::after,
+    .visi-misi-card::before,
+    .visi-misi-card::after,
+    .logo-circle,
+    .page-header h1,
+    .page-header p,
+    .submenu-tabs,
+    .profile-layout,
+    .empty-state {
+        animation: none;
+    }
+
+
+    .school-logo,
+    .visi-misi-card,
+    .profile-table-wrap,
+    .submenu-tabs .tab,
+    .info-item {
+        transition: none;
+    }
+
+}

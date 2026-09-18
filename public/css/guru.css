@@ -1,0 +1,1387 @@
+/* =========================================================
+   GURU & TENAGA PENDIDIK
+   Visual mengikuti halaman Profil
+========================================================= */
+
+
+/* =========================================================
+   FONT
+========================================================= */
+
+.page-header,
+.section,
+.guru-heading,
+.guru-list-heading,
+.guru-grid,
+.guru-card,
+.kepsek-card,
+.kepsek-photo,
+.kepsek-info,
+.gender-icon,
+.guru-empty {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
+.page-header *,
+.section *,
+.kepsek-card *,
+.guru-card * {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   Mengikuti header Profil
+========================================================= */
+
+.page-header {
+    position: relative;
+
+    padding: 80px 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123a6d 0%,
+            #1e5aa8 55%,
+            #2b78c5 100%
+        );
+}
+
+
+/* =========================================================
+   DEKORASI HEADER
+========================================================= */
+
+.page-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -160px;
+    left: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    animation:
+        headerCircle
+        8s
+        ease-in-out
+        infinite;
+}
+
+
+.page-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    animation:
+        headerCircle
+        10s
+        ease-in-out
+        infinite
+        reverse;
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
+
+.page-header .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HEADER TITLE
+========================================================= */
+
+.page-header h1 {
+    margin:
+        0 0 12px;
+
+    color:
+        #ffffff;
+
+    font-size:
+        clamp(32px, 5vw, 50px);
+
+    font-weight:
+        800;
+
+    line-height:
+        1.2;
+
+    letter-spacing:
+        -1px;
+
+    animation:
+        fadeDown
+        0.8s
+        ease
+        both;
+}
+
+
+/* =========================================================
+   HEADER DESCRIPTION
+========================================================= */
+
+.page-header p {
+    max-width:
+        700px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255, 255, 255, 0.90);
+
+    font-size:
+        17px;
+
+    line-height:
+        1.6;
+
+    animation:
+        fadeUp
+        0.8s
+        ease
+        0.2s
+        both;
+}
+
+
+/* =========================================================
+   SECTION
+   Sama dengan Profil
+========================================================= */
+
+.section.container {
+    width:
+        100%;
+
+    max-width:
+        1200px;
+
+    margin:
+        0 auto;
+
+    padding:
+        55px 20px 80px;
+
+    box-sizing:
+        border-box;
+}
+
+
+/* =========================================================
+   JUDUL BAGIAN
+========================================================= */
+
+.guru-heading {
+    margin-bottom:
+        35px;
+
+    animation:
+        fadeUp
+        0.8s
+        ease
+        both;
+}
+
+
+/* =========================================================
+   JUDUL TENAGA PENDIDIK
+========================================================= */
+
+.guru-heading h2 {
+    position:
+        relative;
+
+    margin:
+        0 0 12px;
+
+    padding-bottom:
+        15px;
+
+    color:
+        #123a6d;
+
+    font-size:
+        24px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.3;
+}
+
+
+/* GARIS BAWAH */
+
+.guru-heading h2::after {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    bottom:
+        0;
+
+    width:
+        55px;
+
+    height:
+        3px;
+
+    border-radius:
+        10px;
+
+    background:
+        #1e5aa8;
+}
+
+
+/* DESKRIPSI */
+
+.guru-heading p {
+    margin:
+        0;
+
+    color:
+        #64748b;
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   KEPALA SEKOLAH
+========================================================= */
+
+.kepsek-card {
+    position:
+        relative;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto 45px;
+
+    padding:
+        25px;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8f1fb 0%,
+            #f1f5f9 100%
+        );
+
+    border:
+        1px solid
+        #dbe5f0;
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.06);
+
+    opacity:
+        0;
+
+    animation:
+        fadeUp
+        0.7s
+        ease
+        0.15s
+        forwards;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* DEKORASI */
+
+.kepsek-card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        180px;
+
+    height:
+        180px;
+
+    top:
+        -100px;
+
+    right:
+        -70px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(30, 90, 168, 0.06);
+
+    pointer-events:
+        none;
+}
+
+
+/* HOVER */
+
+.kepsek-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #1e5aa8;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   FOTO KEPALA SEKOLAH
+========================================================= */
+
+.kepsek-photo {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    flex:
+        0 0 130px;
+
+    overflow:
+        hidden;
+
+    border:
+        5px solid
+        rgba(30, 90, 168, 0.18);
+
+    border-radius:
+        50%;
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.08),
+
+        0 0 0 7px
+        rgba(30, 90, 168, 0.05);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* FOTO */
+
+.kepsek-photo img {
+    display:
+        block;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+/* HOVER FOTO */
+
+.kepsek-card:hover .kepsek-photo {
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 12px 25px
+        rgba(0, 0, 0, 0.12),
+
+        0 0 0 7px
+        rgba(30, 90, 168, 0.08);
+}
+
+
+.kepsek-card:hover .kepsek-photo img {
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================================
+   INFO KEPALA SEKOLAH
+========================================================= */
+
+.kepsek-info {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    flex:
+        1;
+
+    min-width:
+        0;
+}
+
+
+/* LABEL */
+
+.kepsek-label {
+    display:
+        inline-block;
+
+    margin-bottom:
+        8px;
+
+    color:
+        #1e5aa8;
+
+    font-size:
+        12px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+/* NAMA */
+
+.kepsek-info h3 {
+    margin:
+        0 0 8px;
+
+    color:
+        #123a6d;
+
+    font-size:
+        24px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.3;
+}
+
+
+/* JABATAN */
+
+.kepsek-info p {
+    margin:
+        0;
+
+    color:
+        #64748b;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   JUDUL DAFTAR GURU
+========================================================= */
+
+.guru-list-heading {
+    margin-bottom:
+        20px;
+
+    opacity:
+        0;
+
+    animation:
+        fadeUp
+        0.7s
+        ease
+        0.3s
+        forwards;
+}
+
+
+.guru-list-heading h3 {
+    position:
+        relative;
+
+    margin:
+        0;
+
+    padding-left:
+        15px;
+
+    color:
+        #123a6d;
+
+    font-size:
+        20px;
+
+    font-weight:
+        700;
+}
+
+
+/* GARIS KIRI */
+
+.guru-list-heading h3::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    top:
+        50%;
+
+    width:
+        4px;
+
+    height:
+        24px;
+
+    transform:
+        translateY(-50%);
+
+    border-radius:
+        10px;
+
+    background:
+        #1e5aa8;
+}
+
+
+/* =========================================================
+   GURU GRID
+========================================================= */
+
+.guru-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap:
+        20px;
+
+    align-items:
+        stretch;
+}
+
+
+/* =========================================================
+   GURU CARD
+========================================================= */
+
+.guru-card {
+    position:
+        relative;
+
+    min-width:
+        0;
+
+    padding:
+        25px 20px;
+
+    overflow:
+        hidden;
+
+    text-align:
+        center;
+
+    background:
+        #ffffff;
+
+    border:
+        1px solid
+        #dbe5f0;
+
+    border-radius:
+        16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.05);
+
+    opacity:
+        0;
+
+    animation:
+        fadeUp
+        0.6s
+        ease
+        forwards;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* DEKORASI CARD */
+
+.guru-card::before {
+    content:
+        "";
+
+    position:
+        absolute;
+
+    width:
+        130px;
+
+    height:
+        130px;
+
+    top:
+        -75px;
+
+    right:
+        -55px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(30, 90, 168, 0.05);
+
+    pointer-events:
+        none;
+}
+
+
+/* HOVER */
+
+.guru-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #1e5aa8;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================================
+   ANIMASI CARD BERURUTAN
+========================================================= */
+
+.guru-card:nth-child(1) {
+    animation-delay:
+        0.15s;
+}
+
+.guru-card:nth-child(2) {
+    animation-delay:
+        0.25s;
+}
+
+.guru-card:nth-child(3) {
+    animation-delay:
+        0.35s;
+}
+
+.guru-card:nth-child(4) {
+    animation-delay:
+        0.45s;
+}
+
+.guru-card:nth-child(5) {
+    animation-delay:
+        0.55s;
+}
+
+.guru-card:nth-child(6) {
+    animation-delay:
+        0.65s;
+}
+
+.guru-card:nth-child(7) {
+    animation-delay:
+        0.75s;
+}
+
+.guru-card:nth-child(8) {
+    animation-delay:
+        0.85s;
+}
+
+.guru-card:nth-child(9) {
+    animation-delay:
+        0.95s;
+}
+
+.guru-card:nth-child(10) {
+    animation-delay:
+        1.05s;
+}
+
+.guru-card:nth-child(11) {
+    animation-delay:
+        1.15s;
+}
+
+.guru-card:nth-child(12) {
+    animation-delay:
+        1.25s;
+}
+
+
+/* =========================================================
+   ICON GURU
+========================================================= */
+
+.gender-icon {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    margin:
+        0 auto 17px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid
+        #dbe5f0;
+
+    border-radius:
+        50%;
+
+    background:
+        #e8f1fb;
+
+    color:
+        #1e5aa8;
+
+    font-size:
+        27px;
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* HOVER ICON */
+
+.guru-card:hover .gender-icon {
+    transform:
+        scale(1.1);
+
+    background:
+        #1e5aa8;
+
+    color:
+        #ffffff;
+
+    box-shadow:
+        0 8px 18px
+        rgba(30, 90, 168, 0.18);
+}
+
+
+/* =========================================================
+   NAMA GURU
+========================================================= */
+
+.guru-card h4 {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0 0 8px;
+
+    color:
+        #123a6d;
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.4;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* HOVER NAMA */
+
+.guru-card:hover h4 {
+    color:
+        #1e5aa8;
+}
+
+
+/* =========================================================
+   JABATAN GURU
+========================================================= */
+
+.guru-card p {
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    margin:
+        0;
+
+    color:
+        #64748b;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.6;
+}
+
+
+/* =========================================================
+   DATA KOSONG
+========================================================= */
+
+.guru-empty {
+    grid-column:
+        1 / -1;
+
+    padding:
+        50px 30px;
+
+    text-align:
+        center;
+
+    background:
+        #ffffff;
+
+    border:
+        1px dashed
+        #dbe5f0;
+
+    border-radius:
+        16px;
+
+    color:
+        #64748b;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 0, 0, 0.04);
+
+    opacity:
+        0;
+
+    animation:
+        fadeUp
+        0.7s
+        ease
+        0.2s
+        forwards;
+}
+
+
+.guru-empty i {
+    display:
+        block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        #1e5aa8;
+
+    font-size:
+        35px;
+}
+
+
+.guru-empty p {
+    margin:
+        0;
+
+    font-size:
+        15px;
+}
+
+
+/* =========================================================
+   ANIMASI FADE UP
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMASI FADE DOWN
+========================================================= */
+
+@keyframes fadeDown {
+
+    from {
+        opacity:
+            0;
+
+        transform:
+            translateY(-25px);
+    }
+
+    to {
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMASI HEADER CIRCLE
+========================================================= */
+
+@keyframes headerCircle {
+
+    0%,
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(30px, 20px)
+            scale(1.08);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET BESAR
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .guru-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        padding:
+            70px 20px;
+    }
+
+
+    .page-header h1 {
+        font-size:
+            34px;
+    }
+
+
+    .page-header p {
+        font-size:
+            15px;
+    }
+
+
+    .section.container {
+        padding:
+            50px 16px 60px;
+    }
+
+
+    .guru-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            18px;
+    }
+
+
+    .kepsek-card {
+        padding:
+            23px;
+    }
+
+
+    .kepsek-photo {
+        width:
+            120px;
+
+        height:
+            120px;
+
+        flex-basis:
+            120px;
+    }
+
+
+    .kepsek-info h3 {
+        font-size:
+            21px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-header {
+        padding:
+            60px 20px;
+    }
+
+
+    .page-header h1 {
+        font-size:
+            30px;
+    }
+
+
+    .page-header p {
+        font-size:
+            14px;
+    }
+
+
+    .section.container {
+        padding:
+            40px 15px 50px;
+    }
+
+
+    .guru-heading {
+        margin-bottom:
+            30px;
+    }
+
+
+    .guru-heading h2 {
+        font-size:
+            22px;
+    }
+
+
+    .guru-grid {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
+    }
+
+
+    .kepsek-card {
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+        gap:
+            18px;
+
+        margin-bottom:
+            40px;
+
+        padding:
+            25px 20px;
+    }
+
+
+    .kepsek-photo {
+        width:
+            120px;
+
+        height:
+            120px;
+
+        flex-basis:
+            120px;
+    }
+
+
+    .kepsek-info h3 {
+        font-size:
+            21px;
+    }
+
+
+    .guru-card {
+        padding:
+            25px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page-header {
+        padding:
+            55px 15px;
+    }
+
+
+    .page-header h1 {
+        font-size:
+            27px;
+    }
+
+
+    .page-header p {
+        font-size:
+            13px;
+    }
+
+
+    .section.container {
+        padding:
+            35px 12px 45px;
+    }
+
+
+    .guru-heading h2 {
+        font-size:
+            21px;
+    }
+
+
+    .guru-heading p {
+        font-size:
+            14px;
+    }
+
+
+    .kepsek-card {
+        border-radius:
+            15px;
+    }
+
+
+    .kepsek-photo {
+        width:
+            110px;
+
+        height:
+            110px;
+
+        flex-basis:
+            110px;
+    }
+
+
+    .kepsek-info h3 {
+        font-size:
+            19px;
+    }
+
+
+    .guru-card {
+        border-radius:
+            15px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-header::before,
+    .page-header::after,
+    .page-header h1,
+    .page-header p,
+    .guru-heading,
+    .guru-list-heading,
+    .kepsek-card,
+    .guru-card,
+    .guru-empty {
+        animation:
+            none;
+    }
+
+
+    .kepsek-card,
+    .kepsek-photo,
+    .kepsek-photo img,
+    .guru-card,
+    .gender-icon,
+    .guru-card h4 {
+        transition:
+            none;
+    }
+
+}

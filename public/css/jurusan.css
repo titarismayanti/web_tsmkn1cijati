@@ -1,0 +1,1181 @@
+/* =========================================================
+   KONSENTRASI KEAHLIAN / JURUSAN
+   Mengikuti gaya visual halaman Profil
+========================================================= */
+
+
+/* =========================================================
+   FONT
+========================================================= */
+
+.page-header,
+.section,
+.jurusan-heading,
+.keahlian-grid,
+.keahlian-card,
+.keahlian-photo,
+.keahlian-logo,
+.keahlian-content,
+.keahlian-empty {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* =========================================================
+   BOX SIZING
+========================================================= */
+
+.page-header,
+.section,
+.jurusan-heading,
+.keahlian-card,
+.keahlian-logo,
+.keahlian-empty {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+   Sama dengan Profil
+========================================================= */
+
+.page-header {
+    position: relative;
+
+    padding: 80px 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123a6d 0%,
+            #1e5aa8 55%,
+            #2b78c5 100%
+        );
+}
+
+
+/* =========================================================
+   DEKORASI HEADER KIRI
+========================================================= */
+
+.page-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    top: -160px;
+    left: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    animation:
+        headerCircle 8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   DEKORASI HEADER KANAN
+========================================================= */
+
+.page-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    animation:
+        headerCircle 10s ease-in-out infinite reverse;
+}
+
+
+/* =========================================================
+   CONTAINER HEADER
+========================================================= */
+
+.page-header .container {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   JUDUL HEADER
+========================================================= */
+
+.page-header h1 {
+    margin: 0 0 12px;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(32px, 5vw, 50px);
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    animation:
+        fadeDown
+        0.8s
+        ease
+        both;
+}
+
+
+/* =========================================================
+   DESKRIPSI HEADER
+========================================================= */
+
+.page-header p {
+    margin: 0;
+
+    color:
+        rgba(255,255,255,0.90);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    animation:
+        fadeUp
+        0.8s
+        ease
+        0.2s
+        both;
+}
+
+
+/* =========================================================
+   SECTION
+   Sama dengan Profil
+========================================================= */
+
+.section.container {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding:
+        55px 20px 80px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   JUDUL BAGIAN
+========================================================= */
+
+.jurusan-heading {
+    margin-bottom: 35px;
+
+    animation:
+        fadeUp
+        0.8s
+        ease
+        both;
+}
+
+
+/* =========================================================
+   JUDUL PROGRAM PENDIDIKAN
+========================================================= */
+
+.jurusan-heading h2 {
+    position: relative;
+
+    margin: 0 0 12px;
+
+    padding-bottom: 15px;
+
+    color: #123a6d;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* GARIS BAWAH JUDUL */
+
+.jurusan-heading h2::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 55px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background: #1e5aa8;
+}
+
+
+/* DESKRIPSI BAGIAN */
+
+.jurusan-heading p {
+    margin: 0;
+
+    max-width: 700px;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID JURUSAN
+========================================================= */
+
+.keahlian-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD JURUSAN
+   Mengikuti profile-table-wrap
+========================================================= */
+
+.keahlian-card {
+    position: relative;
+
+    min-width: 0;
+
+    min-height: 300px;
+
+    padding: 25px 20px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border:
+        1px solid #dbe5f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,0.06);
+
+    opacity: 0;
+
+    animation:
+        fadeUp
+        0.7s
+        ease
+        forwards;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =========================================================
+   DEKORASI CARD
+========================================================= */
+
+.keahlian-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    top: -80px;
+    right: -60px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,90,168,0.06);
+
+    animation:
+        cardDecoration
+        7s
+        ease-in-out
+        infinite;
+
+    pointer-events: none;
+}
+
+
+.keahlian-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    left: -45px;
+    bottom: -55px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(30,90,168,0.04);
+
+    animation:
+        cardDecoration
+        9s
+        ease-in-out
+        infinite
+        reverse;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HOVER CARD
+   Sama karakter dengan Profil
+========================================================= */
+
+.keahlian-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        #1e5aa8;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.10);
+}
+
+
+/* =========================================================
+   ANIMASI CARD BERURUTAN
+========================================================= */
+
+.keahlian-card:nth-child(1) {
+    animation-delay: 0.10s;
+}
+
+.keahlian-card:nth-child(2) {
+    animation-delay: 0.20s;
+}
+
+.keahlian-card:nth-child(3) {
+    animation-delay: 0.30s;
+}
+
+.keahlian-card:nth-child(4) {
+    animation-delay: 0.40s;
+}
+
+.keahlian-card:nth-child(5) {
+    animation-delay: 0.50s;
+}
+
+.keahlian-card:nth-child(6) {
+    animation-delay: 0.60s;
+}
+
+.keahlian-card:nth-child(7) {
+    animation-delay: 0.70s;
+}
+
+.keahlian-card:nth-child(8) {
+    animation-delay: 0.80s;
+}
+
+.keahlian-card:nth-child(9) {
+    animation-delay: 0.90s;
+}
+
+.keahlian-card:nth-child(10) {
+    animation-delay: 1s;
+}
+
+.keahlian-card:nth-child(11) {
+    animation-delay: 1.10s;
+}
+
+.keahlian-card:nth-child(12) {
+    animation-delay: 1.20s;
+}
+
+
+/* =========================================================
+   AREA FOTO / LOGO
+========================================================= */
+
+.keahlian-photo {
+    position: relative;
+
+    z-index: 2;
+
+    display: block;
+
+    text-align: center;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   LOGO JURUSAN
+   Dibuat seperti logo pada Profil
+========================================================= */
+
+.keahlian-logo {
+    position: relative;
+
+    width: 115px;
+    height: 115px;
+
+    margin:
+        0 auto 18px;
+
+    padding: 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    background:
+        #ffffff;
+
+    border:
+        5px solid
+        rgba(30,90,168,0.15);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.10),
+
+        0 0 0 8px
+        rgba(30,90,168,0.05);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   GAMBAR LOGO
+========================================================= */
+
+.keahlian-logo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    transition:
+        transform 0.35s ease;
+}
+
+
+/* =========================================================
+   HOVER LOGO
+========================================================= */
+
+.keahlian-card:hover .keahlian-logo {
+    transform:
+        translateY(-3px)
+        scale(1.06);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.12),
+
+        0 0 0 8px
+        rgba(30,90,168,0.08);
+}
+
+
+.keahlian-card:hover .keahlian-logo img {
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================================
+   FALLBACK LOGO
+========================================================= */
+
+.keahlian-logo-fallback {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #123a6d 0%,
+            #1e5aa8 55%,
+            #2b78c5 100%
+        );
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   BADGE SINGKATAN
+========================================================= */
+
+.keahlian-singkatan {
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-block;
+
+    margin-bottom: 15px;
+
+    padding:
+        4px 14px;
+
+    background:
+        #e8f1fb;
+
+    color:
+        #1e5aa8;
+
+    border:
+        1px solid
+        #dbe5f0;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        0 2px 6px
+        rgba(30,90,168,0.08);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* HOVER BADGE */
+
+.keahlian-card:hover .keahlian-singkatan {
+    background:
+        #1e5aa8;
+
+    color:
+        #ffffff;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.keahlian-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   NAMA JURUSAN
+========================================================= */
+
+.keahlian-content h3 {
+    margin:
+        0 0 10px;
+
+    color:
+        #123a6d;
+
+    font-size:
+        17px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.4;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* HOVER NAMA */
+
+.keahlian-card:hover .keahlian-content h3 {
+    color:
+        #1e5aa8;
+}
+
+
+/* =========================================================
+   KEPALA PROGRAM
+========================================================= */
+
+.keahlian-kaprog {
+    margin:
+        0 0 10px !important;
+
+    color:
+        #1e5aa8 !important;
+
+    font-size:
+        13px !important;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.5;
+}
+
+
+.keahlian-kaprog i {
+    margin-right:
+        4px;
+
+    font-size:
+        12px;
+}
+
+
+/* =========================================================
+   DESKRIPSI
+========================================================= */
+
+.keahlian-description {
+    margin: 0;
+
+    color:
+        #64748b;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+
+/* =========================================================
+   DATA KOSONG
+========================================================= */
+
+.keahlian-empty {
+    grid-column:
+        1 / -1;
+
+    width: 100%;
+
+    padding:
+        50px 30px;
+
+    text-align: center;
+
+    background:
+        #ffffff;
+
+    border:
+        1px dashed
+        #dbe5f0;
+
+    border-radius:
+        16px;
+
+    color:
+        #64748b;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0,0,0,0.04);
+
+    opacity: 0;
+
+    animation:
+        fadeUp
+        0.7s
+        ease
+        0.15s
+        forwards;
+}
+
+
+.keahlian-empty i {
+    display: block;
+
+    margin-bottom:
+        12px;
+
+    color:
+        #1e5aa8;
+
+    font-size:
+        35px;
+}
+
+
+.keahlian-empty p {
+    margin: 0;
+
+    font-size:
+        15px;
+}
+
+
+/* =========================================================
+   ANIMASI FADE UP
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMASI FADE DOWN
+========================================================= */
+
+@keyframes fadeDown {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMASI HEADER
+========================================================= */
+
+@keyframes headerCircle {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(30px,20px)
+            scale(1.08);
+    }
+
+}
+
+
+/* =========================================================
+   ANIMASI DEKORASI CARD
+========================================================= */
+
+@keyframes cardDecoration {
+
+    0%,
+    100% {
+        transform:
+            translate(0,0);
+    }
+
+    50% {
+        transform:
+            translate(-10px,10px);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET BESAR
+========================================================= */
+
+@media (max-width: 992px) {
+
+    .keahlian-grid {
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page-header {
+        padding:
+            70px 20px;
+    }
+
+
+    .page-header h1 {
+        font-size:
+            34px;
+    }
+
+
+    .page-header p {
+        font-size:
+            15px;
+    }
+
+
+    .section.container {
+        padding:
+            50px 16px 60px;
+    }
+
+
+    .keahlian-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            18px;
+    }
+
+
+    .jurusan-heading {
+        margin-bottom:
+            30px;
+    }
+
+
+    .jurusan-heading h2 {
+        font-size:
+            22px;
+    }
+
+
+    .keahlian-card {
+        min-height:
+            290px;
+
+        padding:
+            23px 18px;
+    }
+
+
+    .keahlian-logo {
+        width:
+            105px;
+
+        height:
+            105px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page-header {
+        padding:
+            60px 20px;
+    }
+
+
+    .page-header h1 {
+        font-size:
+            30px;
+
+        letter-spacing:
+            0;
+    }
+
+
+    .page-header p {
+        font-size:
+            14px;
+    }
+
+
+    .section.container {
+        padding:
+            40px 15px 50px;
+    }
+
+
+    .jurusan-heading {
+        margin-bottom:
+            25px;
+    }
+
+
+    .jurusan-heading h2 {
+        font-size:
+            21px;
+    }
+
+
+    .jurusan-heading p {
+        font-size:
+            14px;
+    }
+
+
+    .keahlian-grid {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            16px;
+    }
+
+
+    .keahlian-card {
+        min-height:
+            auto;
+
+        padding:
+            25px 20px;
+    }
+
+
+    .keahlian-logo {
+        width:
+            115px;
+
+        height:
+            115px;
+    }
+
+
+    .keahlian-content h3 {
+        font-size:
+            17px;
+    }
+
+
+    .keahlian-kaprog {
+        font-size:
+            13px !important;
+    }
+
+
+    .keahlian-description {
+        font-size:
+            14px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .page-header {
+        padding:
+            55px 15px;
+    }
+
+
+    .page-header h1 {
+        font-size:
+            27px;
+    }
+
+
+    .page-header p {
+        font-size:
+            13px;
+    }
+
+
+    .section.container {
+        padding:
+            35px 12px 45px;
+    }
+
+
+    .keahlian-card {
+        padding:
+            22px 17px;
+
+        border-radius:
+            15px;
+    }
+
+
+    .keahlian-logo {
+        width:
+            110px;
+
+        height:
+            110px;
+    }
+
+
+    .keahlian-content h3 {
+        font-size:
+            16px;
+    }
+
+
+    .keahlian-description {
+        font-size:
+            13px;
+
+        line-height:
+            1.7;
+    }
+
+
+    .keahlian-empty {
+        padding:
+            40px 20px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .page-header::before,
+    .page-header::after,
+    .keahlian-card::before,
+    .keahlian-card::after,
+    .page-header h1,
+    .page-header p,
+    .jurusan-heading,
+    .keahlian-card,
+    .keahlian-empty {
+        animation:
+            none;
+    }
+
+
+    .keahlian-card,
+    .keahlian-logo,
+    .keahlian-logo img,
+    .keahlian-singkatan {
+        transition:
+            none;
+    }
+
+}

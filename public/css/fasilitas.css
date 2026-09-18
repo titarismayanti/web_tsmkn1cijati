@@ -1,0 +1,992 @@
+/* =========================================================
+FASILITAS SEKOLAH
+Visual mengikuti halaman Profil
+========================================================= */
+
+/* =========================================================
+FONT
+========================================================= */
+
+.page-header,
+.section,
+.fasilitas-heading,
+.fasilitas-grid,
+.fasilitas-card,
+.fasilitas-thumb,
+.fasilitas-body,
+.fasilitas-empty {
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+}
+
+/* =========================================================
+BOX SIZING
+========================================================= */
+
+.page-header *,
+.section *,
+.fasilitas-card * {
+box-sizing: border-box;
+}
+
+/* =========================================================
+PAGE HEADER
+Sama dengan halaman Profil
+========================================================= */
+
+.page-header {
+position: relative;
+
+
+padding: 80px 20px;
+
+overflow: hidden;
+
+text-align: center;
+
+color: #ffffff;
+
+background:
+    linear-gradient(
+        135deg,
+        #123a6d 0%,
+        #1e5aa8 55%,
+        #2b78c5 100%
+    );
+
+
+}
+
+/* =========================================================
+DEKORASI HEADER
+========================================================= */
+
+.page-header::before {
+content: "";
+
+position: absolute;
+
+width: 300px;
+height: 300px;
+
+top: -160px;
+left: -80px;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.08);
+
+animation:
+    headerCircle
+    8s
+    ease-in-out
+    infinite;
+
+
+}
+
+.page-header::after {
+content: "";
+
+
+position: absolute;
+
+width: 250px;
+height: 250px;
+
+right: -100px;
+bottom: -150px;
+
+border-radius: 50%;
+
+background:
+    rgba(255, 255, 255, 0.08);
+
+animation:
+    headerCircle
+    10s
+    ease-in-out
+    infinite
+    reverse;
+
+
+}
+
+/* =========================================================
+HEADER CONTAINER
+========================================================= */
+
+.page-header .container {
+position: relative;
+
+
+z-index: 2;
+
+
+}
+
+/* =========================================================
+JUDUL HEADER
+========================================================= */
+
+.page-header h1 {
+margin:
+0 0 12px;
+
+
+color:
+    #ffffff;
+
+font-size:
+    clamp(32px, 5vw, 50px);
+
+font-weight:
+    800;
+
+line-height:
+    1.2;
+
+letter-spacing:
+    -1px;
+
+animation:
+    fadeDown
+    0.8s
+    ease
+    both;
+
+
+}
+
+/* =========================================================
+DESKRIPSI HEADER
+========================================================= */
+
+.page-header p {
+max-width:
+700px;
+
+
+margin:
+    0 auto;
+
+color:
+    rgba(255, 255, 255, 0.90);
+
+font-size:
+    17px;
+
+line-height:
+    1.6;
+
+animation:
+    fadeUp
+    0.8s
+    ease
+    0.2s
+    both;
+
+
+}
+
+/* =========================================================
+SECTION
+========================================================= */
+
+.section.container.fasilitas-section {
+width:
+100%;
+
+
+max-width:
+    1200px;
+
+margin:
+    0 auto;
+
+padding:
+    55px 20px 80px;
+
+box-sizing:
+    border-box;
+
+background:
+    #ffffff;
+
+
+}
+
+/* =========================================================
+JUDUL BAGIAN
+========================================================= */
+
+.fasilitas-heading {
+margin-bottom:
+35px;
+
+
+animation:
+    fadeUp
+    0.8s
+    ease
+    both;
+
+
+}
+
+/* =========================================================
+JUDUL
+========================================================= */
+
+.fasilitas-heading h2 {
+position:
+relative;
+
+margin:
+    0 0 12px;
+
+padding-bottom:
+    15px;
+
+color:
+    #123a6d;
+
+font-size:
+    24px;
+
+font-weight:
+    700;
+
+line-height:
+    1.3;
+
+
+}
+
+/* GARIS BAWAH */
+
+.fasilitas-heading h2::after {
+content:
+"";
+
+position:
+    absolute;
+
+left:
+    0;
+
+bottom:
+    0;
+
+width:
+    55px;
+
+height:
+    3px;
+
+border-radius:
+    10px;
+
+background:
+    #1e5aa8;
+
+
+}
+
+/* DESKRIPSI */
+
+.fasilitas-heading p {
+max-width:
+700px;
+
+
+margin:
+    0;
+
+color:
+    #64748b;
+
+font-size:
+    15px;
+
+line-height:
+    1.7;
+
+
+}
+
+/* =========================================================
+GRID
+========================================================= */
+
+.fasilitas-grid {
+display:
+grid;
+
+
+grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+gap:
+    24px;
+
+width:
+    100%;
+
+
+}
+
+/* =========================================================
+CARD
+========================================================= */
+
+.fasilitas-card {
+position:
+relative;
+
+
+min-width:
+    0;
+
+overflow:
+    hidden;
+
+background:
+    #ffffff;
+
+border:
+    1px solid
+    #dbe5f0;
+
+border-radius:
+    16px;
+
+box-shadow:
+    0 6px 20px
+    rgba(0, 0, 0, 0.06);
+
+opacity:
+    0;
+
+animation:
+    fadeUp
+    0.6s
+    ease
+    forwards;
+
+transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+
+}
+
+/* =========================================================
+DEKORASI CARD
+========================================================= */
+
+.fasilitas-card::after {
+content:
+"";
+
+
+position:
+    absolute;
+
+width:
+    120px;
+
+height:
+    120px;
+
+right:
+    -60px;
+
+bottom:
+    -60px;
+
+border-radius:
+    50%;
+
+background:
+    rgba(30, 90, 168, 0.05);
+
+pointer-events:
+    none;
+
+
+}
+
+/* =========================================================
+HOVER CARD
+========================================================= */
+
+.fasilitas-card:hover {
+transform:
+translateY(-7px);
+
+
+border-color:
+    #1e5aa8;
+
+box-shadow:
+    0 14px 32px
+    rgba(0, 0, 0, 0.10);
+
+
+}
+
+/* =========================================================
+ANIMASI CARD BERURUTAN
+========================================================= */
+
+.fasilitas-card:nth-child(1) {
+animation-delay:
+0.10s;
+}
+
+.fasilitas-card:nth-child(2) {
+animation-delay:
+0.20s;
+}
+
+.fasilitas-card:nth-child(3) {
+animation-delay:
+0.30s;
+}
+
+.fasilitas-card:nth-child(4) {
+animation-delay:
+0.40s;
+}
+
+.fasilitas-card:nth-child(5) {
+animation-delay:
+0.50s;
+}
+
+.fasilitas-card:nth-child(6) {
+animation-delay:
+0.60s;
+}
+
+.fasilitas-card:nth-child(7) {
+animation-delay:
+0.70s;
+}
+
+.fasilitas-card:nth-child(8) {
+animation-delay:
+0.80s;
+}
+
+.fasilitas-card:nth-child(9) {
+animation-delay:
+0.90s;
+}
+
+.fasilitas-card:nth-child(10) {
+animation-delay:
+1.00s;
+}
+
+.fasilitas-card:nth-child(11) {
+animation-delay:
+1.10s;
+}
+
+.fasilitas-card:nth-child(12) {
+animation-delay:
+1.20s;
+}
+
+/* =========================================================
+FOTO
+========================================================= */
+
+.fasilitas-thumb {
+position:
+relative;
+
+width:
+    100%;
+
+height:
+    230px;
+
+overflow:
+    hidden;
+
+background:
+    #e8f1fb;
+
+
+}
+
+/* =========================================================
+GAMBAR
+========================================================= */
+
+.fasilitas-thumb img {
+display:
+block;
+
+width:
+    100%;
+
+height:
+    100%;
+
+object-fit:
+    cover;
+
+transition:
+    transform 0.45s ease;
+
+
+}
+
+/* =========================================================
+HOVER FOTO
+========================================================= */
+
+.fasilitas-card:hover .fasilitas-thumb img {
+transform:
+scale(1.08);
+}
+
+/* =========================================================
+BODY CARD
+========================================================= */
+
+.fasilitas-body {
+position:
+relative;
+
+
+z-index:
+    2;
+
+padding:
+    18px 20px 20px;
+
+background:
+    #ffffff;
+
+
+}
+
+/* =========================================================
+NAMA FASILITAS
+========================================================= */
+
+.fasilitas-body h3 {
+margin:
+0;
+
+
+color:
+    #123a6d;
+
+font-size:
+    18px;
+
+font-weight:
+    700;
+
+line-height:
+    1.4;
+
+transition:
+    color 0.3s ease,
+
+
+}
+
+/* =========================================================
+HOVER JUDUL
+========================================================= */
+
+.fasilitas-card:hover .fasilitas-body h3 {
+color:
+#1e5aa8;
+
+
+transform:
+    translateX(2px);
+
+
+}
+
+/* =========================================================
+DATA KOSONG
+========================================================= */
+
+.fasilitas-empty {
+grid-column:
+1 / -1;
+
+width:
+    100%;
+
+min-height:
+    180px;
+
+padding:
+    40px 30px;
+
+display:
+    flex;
+
+flex-direction:
+    column;
+
+align-items:
+    center;
+
+justify-content:
+    center;
+
+gap:
+    10px;
+
+background:
+    #ffffff;
+
+border:
+    1px dashed
+    #dbe5f0;
+
+border-radius:
+    16px;
+
+color:
+    #64748b;
+
+text-align:
+    center;
+
+box-shadow:
+    0 6px 20px
+    rgba(0, 0, 0, 0.04);
+
+opacity:
+    0;
+
+animation:
+    fadeUp
+    0.7s
+    ease
+    0.15s
+    forwards;
+
+
+}
+
+.fasilitas-empty i {
+color:
+#1e5aa8;
+
+font-size:
+    35px;
+
+
+}
+
+.fasilitas-empty p {
+margin:
+0;
+
+font-size:
+    15px;
+
+
+}
+
+/* =========================================================
+FADE UP
+========================================================= */
+
+@keyframes fadeUp {
+
+
+from {
+    opacity:
+        0;
+
+    transform:
+        translateY(30px);
+}
+
+to {
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+}
+
+
+}
+
+/* =========================================================
+FADE DOWN
+========================================================= */
+
+@keyframes fadeDown {
+
+
+from {
+    opacity:
+        0;
+
+    transform:
+        translateY(-25px);
+}
+
+to {
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+}
+
+
+}
+
+/* =========================================================
+HEADER CIRCLE
+========================================================= */
+
+@keyframes headerCircle {
+
+
+0%,
+100% {
+    transform:
+        translate(0, 0)
+        scale(1);
+}
+
+50% {
+    transform:
+        translate(30px, 20px)
+        scale(1.08);
+}
+
+
+}
+
+/* =========================================================
+TABLET BESAR
+========================================================= */
+
+@media (max-width: 992px) {
+
+
+.page-header {
+    padding:
+        70px 20px;
+}
+
+
+.fasilitas-grid {
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap:
+        20px;
+}
+
+
+.fasilitas-thumb {
+    height:
+        220px;
+}
+
+
+}
+
+/* =========================================================
+TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+.page-header {
+    padding:
+        65px 20px;
+}
+
+
+.page-header h1 {
+    font-size:
+        34px;
+}
+
+
+.page-header p {
+    font-size:
+        15px;
+}
+
+
+.section.container.fasilitas-section {
+    padding:
+        50px 16px 60px;
+}
+
+
+.fasilitas-heading {
+    margin-bottom:
+        30px;
+}
+
+
+.fasilitas-heading h2 {
+    font-size:
+        22px;
+}
+
+
+.fasilitas-heading p {
+    font-size:
+        14px;
+}
+
+
+.fasilitas-grid {
+    grid-template-columns:
+        1fr;
+
+    gap:
+        18px;
+}
+
+
+.fasilitas-thumb {
+    height:
+        220px;
+}
+
+
+}
+
+/* =========================================================
+HP KECIL
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+.page-header {
+    padding:
+        55px 15px;
+}
+
+
+.page-header h1 {
+    font-size:
+        27px;
+}
+
+
+.page-header p {
+    font-size:
+        13px;
+}
+
+
+.section.container.fasilitas-section {
+    padding:
+        40px 14px 50px;
+}
+
+
+.fasilitas-heading {
+    margin-bottom:
+        25px;
+}
+
+
+.fasilitas-heading h2 {
+    font-size:
+        21px;
+}
+
+
+.fasilitas-heading p {
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+
+.fasilitas-grid {
+    gap:
+        16px;
+}
+
+
+.fasilitas-card {
+    border-radius:
+        15px;
+}
+
+
+.fasilitas-thumb {
+    height:
+        200px;
+}
+
+
+.fasilitas-body {
+    padding:
+        16px 18px 18px;
+}
+
+
+.fasilitas-body h3 {
+    font-size:
+        17px;
+}
+
+
+}
+
+/* =========================================================
+REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+
+.page-header::before,
+.page-header::after,
+.page-header h1,
+.page-header p,
+.fasilitas-heading,
+.fasilitas-card,
+.fasilitas-empty {
+    animation:
+        none;
+}
+
+
+.fasilitas-card,
+.fasilitas-thumb img,
+.fasilitas-body h3 {
+    transition:
+        none;
+}
+
+
+}
